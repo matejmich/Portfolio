@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michalec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../assets/m.png">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <!-- one -->
+    <div class="page page-one">
+        <div class="flex row row-one wrap">
+            <div class="collumn">
+                <h3>Ahoj, jsem</h3>
+                <div class="name flex row nowrap">
+                    MATĚJ
+                </div>
+                <h3 class="typing-animation">Frontend vývojář</h3>
+            </div>
+            <div class="flex collumn info collumn-two">
+                <div class="info-container flex row" >
+                    <img class="info-icon" src="../assets/mail.svg" alt=mail">
+                    <h2>matejmch@seznam.cz</h2>
+                </div>
+                <div class="info-container flex row">
+                    <img class="info-icon" src="../assets/phone.svg" alt="phone">
+                    <h2>604 653 195</h2>
+                </div>
+                <div  class="info-container flex row">
+                    <img class="info-icon" src="../assets/location.svg" alt="location">
+                    <h2>Pardubice</h2>
+                </div>
+                <div  class="info-container flex row clickable" id="cv-link">
+                    <img class="info-icon" src="../assets/cv.svg" alt="cv">
+                    <h2>Životopis</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="collumn collumn-one flex">
+            
+                <button class="slide-btn" id="scroll-btn1">
+                    Více info
+                </button>
+                <img class="info-icon" id="arrow" src="../assets/arrow.png" alt="arrow">
+            
+        </div>
+    </div>
+    <!-- two -->
+    <div class="page page-two">
+        <h1 class="header-basic">Nástroje a dovednosti:</h1>
+        <div class="tools-container flex row">
+            <div class="icon-container">
+
+                <img src="../assets/css.svg" class="icon" alt="css">
+                <h4>CSS</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/figma.svg" class="icon" alt="figma">
+                <h4>FIGMA</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/git.svg" class="icon" alt="git">
+                <h4>GIT</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/html.svg" class="icon" alt="html">
+                <h4>HTML</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/javascript.svg" class="icon" alt="javascript">
+                <h4>JAVASCRIPT</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/github.svg" class="icon" alt="github">
+                <h4>GITHUB</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/photoshop.svg" class="icon" alt="photoshop">
+                <h4>PHOTOSHOP</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/react.svg" class="icon" alt="react">
+                <h4>REACT</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/tailwind.svg" class="icon" alt="tailwind">
+                <h4>TAILWIND</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/typescript.svg" class="icon" alt="typescript">
+                <h4>TYPESCRIPT</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/webpack.png" class="icon" alt="webpack">
+                <h4>WEBPACK</h4>
+            </div>
+            <div class="icon-container">
+                <img src="../assets/vue.svg" class="icon" alt="vue">
+                <h4>VUE</h4>
+            </div>
+        </div>
+        <h1>Proč Fronted?</h1>
+        <div class="paragraph flex collumn">
+            
+            <h2>Po tříleté kariéře v mechanické konstrukci jsem se rozhodl přejít k frontend vývoji s cílem spojit technické dovednosti s kreativitou a neustálou touhou po nových znalostech.</h2>
+            <h2>Práce v eshopu mi poskytla cenné zkušenosti v online prostředí, designu a digitálním marketingu.</h2>
+        </div>
+        <div class="collumn collumn-one flex">
+            
+            <button class="slide-btn" id="scroll-btn2">
+                Moje práce
+            </button>
+            <img class="info-icon" id="arrow" src="../assets/arrow.png" alt="arrow">
+        
+        </div> 
+    </div>
+     
+    <!-- three -->
+    <div class="page page-three flex">
+        <div class="portfolio">
+            <div>
+                <h1>Projekty:</h1>
+            </div>
+            <div class="project-container flex nowrap">
+                <input type="radio" name="project" id="p1" checked>
+                <label for="p1" class="card">
+                    
+                    <div class="row flex nowrap down">
+                        <div class="indicator">1</div>
+                        <div class="description">
+                            <div class="description-header">Eshop</div>
+                            <div class="description-text"></div>
+                        </div>
+                        <div class="links">
+                            <button class="links-btn">Github</button>
+                            <button class="links-btn">Web</button>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="project" id="p2" >
+                <label for="p2" class="card">
+                    <div class="row flex nowrap down">
+                        <div class="indicator">2</div>
+                        <div class="description">
+                            <div class="description-header">Paměťová hra</div>
+                            <div class="description-text">blalallalalalal</div>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="project" id="p3" >
+                <label for="p3" class="card">
+                    <div class="row flex nowrap down">
+                        <div class="indicator">3</div>
+                        <div class="description">
+                            <div class="description-header">Aplikace na tvoření CV</div>
+                            <div class="description-text">blalallalalalal</div>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="project" id="p4" >
+                <label for="p4" class="card">
+                    <div class="row flex nowrap down">
+                        <div class="indicator">4</div>
+                        <div class="description">
+                            <div class="description-header">Piškvorky</div>
+                            <div class="description-text">blalallalalalal</div>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="project" id="p5" >
+                <label for="p5" class="card">
+                    <div class="row flex nowrap down">
+                        <div class="indicator">5</div>
+                        <div class="description">
+                            <div class="description-header">Todo aplikace</div>
+                            <div class="description-text">blalallalalalal</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- assets -->
+    <div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+</body>
+</html>

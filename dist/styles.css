@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --orange: #F07900;
+    --black: #151515;
+    --green: #2c8563;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: var(--orange);
+}
+body {
+    background: url(../assets/endless-constellation.png);
+    cursor: none;
+}
+button {
+    cursor: none;
+}
+.page-three {
+    background: url(../assets/endless-constellation.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    box-shadow: 0px 5px 100px var(--orange);
+}
+.page-two {
+    position: relative;
+    background-color: var(--black);
+    box-shadow: 0px 5px 100px var(--black);
+}
+.page {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+  }
+.flex {
+    display: flex;
+}
+.nowrap {
+    flex-wrap: nowrap;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.row {
+    flex-direction: row;
+}
+.collumn {
+    flex-direction: column;
+}
+.info-container {
+    margin: 0.5rem;
+    align-items: center;
+    position: relative;
+}
+.info-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--orange);
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+.info-container:hover::after {
+    transform: scaleX(1);
+}
+.info-icon {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    filter: invert(38%) sepia(90%) saturate(800%) hue-rotate(9deg) brightness(98%) contrast(105%);
+}
+h2 {
+    font-weight: 100;
+    font-size: 3rem;
+    text-shadow: 2px 2px #392109;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 5rem;
+}
+.name {
+    font-size: 10rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--orange);
+    background: url(../assets/backk.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 30s linear infinite;
+}
+@keyframes back {
+    to {
+        background-position: 2000px 0;
+    }
+}
+
+.row-one {
+    padding: 5rem;
+    justify-content: space-between;
+    background-color: var(--black);
+    box-shadow: 0px 5px 100px var(--orange);
+}
+.collumn-one {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.slide-btn {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 100;
+    background-color: var(--black);
+    border: 2px solid var(--orange);
+    z-index: 1;
+    padding: 0.5em;
+    margin-top: 5rem;
+}
+.slide-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--orange);
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.slide-btn:hover::before {
+
+    transform: scaleX(1);
+}
+.slide-btn:hover {
+    color: var(--black);
+}
+
+.collumn-two {
+    position: relative;
+    display: flex;
+    height:   100%;
+    padding:  20px;
+    z-index:  2; 
+    border-radius:  10px;
+    overflow: hidden;
+}
+
+.collumn-two::before {
+    content: "";
+    position: absolute;
+    width:   30%;
+    height:   250%;
+    background-color: var(--orange);
+    animation-name: rotate;
+    animation-duration:   8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top:  -70%;
+    left:   30%;
+    z-index:  -1; /* Optionally decrease the z-index of ::before or remove it */
+}
+.collumn-two::after {
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    inset: 5px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.tools-container {
+
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+    position: relative; 
+    width: 100vw;
+    background-color: var(--orange);
+    height: 200px;
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+}
+
+.tools-container h4 {
+    text-align: center;
+    color: var(--black);
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px; /* Adjust the spacing between icons */
+}
+.icon-container {
+    position: absolute; /* Set position to absolute */
+    top: 50%; /* Adjust top position */
+    transform: translateY(-50%); /* Center the icon vertically */
+    opacity: 0; /* Initially hidden */
+}
+
+.icon-container:hover img {
+    filter: invert(42%) sepia(16%) saturate(1665%) hue-rotate(91deg) brightness(97%) contrast(87%);
+    transform: scale(115%);
+}
+
+.icon-container:nth-child(1) { left: 0; }
+.icon-container:nth-child(2) { left: 8.333%; }
+.icon-container:nth-child(3) { left: 16.667%; }
+.icon-container:nth-child(4) { left: 25%; }
+.icon-container:nth-child(5) { left: 33.333%; }
+.icon-container:nth-child(6) { left: 41.667%; }
+.icon-container:nth-child(7) { left: 50%; }
+.icon-container:nth-child(8) { left: 58.333%; }
+.icon-container:nth-child(9) { left: 66.667%; }
+.icon-container:nth-child(10) { left: 75%; }
+.icon-container:nth-child(11) { left: 83.333%; }
+.icon-container:nth-child(12) { left: 91.667%; }
+
+#arrow {
+
+ animation: swing 2s ease-in-out infinite;
+}
+@keyframes swing {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.copied::after {
+    background-color: var(--green);
+  }
+.paragraph { 
+    padding: 0 5rem;
+    background-color: var(--black);
+    
+}
+
+.page-three {
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.project-container {
+    justify-content: start;
+    height: 40rem;
+}
+.card {
+    width: 5rem;
+    border-radius: .8rem;
+    background-color: var(--black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: none;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: 600ms;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.6);
+}
+.project-container > input {
+    display: none;
+}
+.indicator {
+    /* background-color: var(--black); */
+    background-color: var(--black);
+    color: var(--orange);
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.description {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 300ms;
+    transition: all 800ms ease;
+}
+.description-text {
+    color: var(--black);
+}
+.description-header {
+    color: var(--black);
+    font-weight: 8 00;
+}
+input:checked + label {
+    width: 50rem;
+}
+input:checked + label .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+.links {
+    display: flex;
+    justify-content: flex-end; /* Position buttons to the far right */
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.links-btn {
+    background-color: var(--orange);
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 5px 10px;
+    margin-left: 10px;
+    
+    border-radius: 10px;
+  
+    
+}
+
+.links-btn:hover {
+    background-color: var(--black);
+    color: var(--orange);
+}
+
+.links-btn:focus {
+    outline: none;
+}
+input:checked + label:hover .links{
+    opacity: 1;
+    transform: translateY(0);
+}
+.down {
+    background-color: var(--orange);
+    width: 100%;
+    height: 50px;
+    
+}
+.card[for="p1"] {
+    background-image: url(../assets/coffee.png);
+}
+.card[for="p5"] {
+    background-image: url(../assets/todo.png);
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem
+}
+.typing-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid var(--orange);
+    width: 100%;
+    animation: 
+        writing 2s steps(16),
+        cursor 0.4s step-end infinite alternate;
+}
+ @keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+ }
+ @keyframes writing {
+    from { width:0 }
+ }
