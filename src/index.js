@@ -102,7 +102,7 @@ const cvContainer = document.getElementById('cv-link');
 // Add a click event listener to the h2 element
 cvContainer.addEventListener('click', function() {
     // URL of the PDF file
-    const pdfUrl = '../assets/cv.pdf';
+    const pdfUrl = 'cv.pdf';
 
     // Open the PDF file in a new tab
     window.open(pdfUrl, '_blank');
