@@ -32,7 +32,7 @@ button {
     box-shadow: 0px 5px 100px var(--black);
 }
 .page {
-    width: 100vw;
+    min-width: 100vw;
     height: 100vh;
     max-height: 100vh;
 }
@@ -119,6 +119,7 @@ h3 {
     justify-content: space-between;
     background-color: var(--black);
     box-shadow: 0px 5px 100px var(--orange);
+    min-width: 100%;
 }
 .collumn-one {
     width: 100vw;
@@ -162,7 +163,7 @@ h3 {
 .collumn-two {
     position: relative;
     display: flex;
-    height:   100%;
+    height:   fit-content;
     padding:  20px;
     z-index:  2; 
     border-radius:  10px;
@@ -286,7 +287,7 @@ h3 {
 .card {
     width: 5rem;
     border-radius: .8rem;
-    background-color: var(--black);
+    background-color: var(--orange);
     background-size: cover;
     background-repeat: no-repeat;
     cursor: none;
@@ -296,7 +297,7 @@ h3 {
     display: flex;
     align-items: flex-end;
     transition: 600ms;
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.6);
+    box-shadow: 0px 10px 25px -10px var(--orange);
 }
 .project-container > input {
     display: none;
@@ -377,9 +378,33 @@ input:checked + label:hover .links{
 }
 .card[for="p1"] {
     background-image: url(coffee.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card[for="p2"] {
+    background-image: url(memory.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card[for="p3"] {
+    background-image: url(weather.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card[for="p4"] {
+    background-image: url(cv.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .card[for="p5"] {
     background-image: url(todo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 h1 {
     text-align: center;
@@ -402,4 +427,72 @@ h1 {
  }
  @keyframes writing {
     from { width:0 }
+ }
+ @media (max-width: 1340px) {
+    .row-one {
+        display: flex;
+        justify-content: center;
+    }
+    .page-one {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .description {
+        opacity: 1;
+    }
+    input + label {
+        width: 30rem;
+    }
+    input:checked + label {
+        width: 30rem;
+    }
+
+ }
+ @media (max-width: 1200px) {
+    *{
+        font-size: 10px;
+    }
+    .icon {
+        max-width: 50px;
+        max-height: 50px;
+    }
+ }
+ @media (max-width: 600px) {
+    *{
+        font-size: 8px;
+    }
+    .icon-container h4 {
+        font-size: 4px;
+    }
+    .tools-container {
+        height: 100px;
+        min-width: 100%;
+    }
+    .icon {
+        max-width: 20px;
+        max-height: 20px;
+    }
+    input + label {
+        width: 1rem;
+    }
+    input:checked + label {
+        width: 20rem;
+    }
+    
+    .description-text {
+        font-size: 6px;
+    }
+    .description {
+        min-width: 50px;
+    }
+    .links-btn {
+        padding: 2px 5px;
+        font-size: 4px;
+        margin-left: 5px;
+        border-width: 1px;
+    }
+    .indicator {
+        margin: 5px;
+    }
  }
